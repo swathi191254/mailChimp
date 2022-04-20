@@ -38,7 +38,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" background-color='#ffe01b'>
+    <AppBar position="static" className='nav'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -126,6 +126,18 @@ const ResponsiveAppBar = () => {
           >
          <SavedSearchIcon />
           </Typography>
+          <Typography
+            variant="p"
+            noWrap
+            component="div"
+            color='black'
+            className='chimp'
+            sx={{ ml:2, display: { xs: 'none',md:'flex'  },  }}
+          >
+          
+          </Typography>
+          
+          <Button href="#text-buttons">Link</Button>
          
         </Toolbar>
       </Container>
