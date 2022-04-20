@@ -74,6 +74,10 @@ function Body() {
           
 
          </div>
+         <div className='why'>
+         <h1>Grow with Mailchimp</h1>
+         <p>We’re built for growing businesses. Put our marketing and sales tools behind your idea, dream, brand, or business and we’ll help you share it with the world.</p>
+     </div>
     </div>
 
   )
