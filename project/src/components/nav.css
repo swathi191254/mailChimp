@@ -1,6 +1,100 @@
-.nav{
-    background:  #ffe01b;
-}
+
 .chimp > img{
     width: 60%;
+}
+*{
+    font-family: Graphik Web,Helvetica Neue,Helvetica,Arial,Verdana,sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+        background-color: #ffe01b;
+        padding-bottom: 5%;
+    
+}
+.grid >div> img{
+    width: 70%;
+    margin-top: 50px;
+}
+.grid1{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.grid1 > h1{
+    font-size: 3.375rem;
+    letter-spacing: -.03125rem;
+    
+    font-family: Graphik Web,Helvetica Neue,Helvetica,Arial,Verdana,sans-serif;
+}
+.grid1 > h3{
+    color: #241c15;
+    font-family: Graphik Web,Helvetica Neue,Helvetica,Arial,Verdana,sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+.why > h1{
+    color: #403b3b;
+    font-family: Graphik Web,Helvetica Neue,Helvetica,Arial,Verdana,sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center!important;
+    margin-top: 3em;
+}
+.why > p{
+    margin-bottom: 3em;
+    text-align: center!important;
+    margin-left: 33%;
+    margin-right: 33%;
+    font-size: 1em;
+    letter-spacing: 0;
+    color: #403b3b;
+    font-family: Graphik Web,Helvetica Neue,Helvetica,Arial,Verdana,sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.three{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 3em;
+    margin-bottom: 5rem;
+   
+}
+.three > div{
+    margin-left: 5%;
+    width: 25%;
+}
+.million > h1{
+    color: #241c15;
+    font-family: Means Web,Georgia,Times,Times New Roman,serif;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    margin-left: 20%;
+   margin-right:20% ;
+  
+    text-align: center !important;
+}
+
+.grid4{
+    display: flex;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+.grid4 > img{
+    width: 15%;
+    margin: 5%;
+    
+}
+.get{
+    margin-left: 35%;
+    color: #241c15;
+    font-family: Means Web,Georgia,Times,Times New Roman,serif;
+    font-size: 20px;
+    
+    line-height: 1;
+    margin-top: 10%;
 }

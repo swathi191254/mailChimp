@@ -48,6 +48,7 @@ const ResponsiveAppBar = () => {
             color='black'
             sx={{ ml: 2, display: { xs: 'none', md: 'flex' } }}
           >
+            
             Products
           </Typography>
           <Typography
@@ -126,22 +127,48 @@ const ResponsiveAppBar = () => {
           >
          <SavedSearchIcon />
           </Typography>
-          <Typography
-            variant="p"
-            noWrap
-            component="div"
-            color='black'
-            className='chimp'
-            sx={{ ml:2, display: { xs: 'none',md:'flex'  },  }}
+          <div
+            style={{
+              marginLeft: "2rem",
+              color: "#241C15",
+              marginTop: "-.8rem",
+            }}
           >
-          
-          </Typography>
-          
-          <Button href="#text-buttons">Link</Button>
+            <button
+              style={{
+                padding: "10.5px 31px",
+                fontWeight: "500",
+                fontStyle: "normal",
+                fontSize: "14px",
+                color: "#241C15",
+                lineHeight: "15px",
+                border: " 0.8px solid #241C15",
+                background: "transparent",
+              }}
+            >
+              Log In
+            </button>
+          </div>
+          <div style={{ marginLeft: "2rem", marginTop: "-1rem" }}>
+            <button
+             
+              style={{
+                padding: "10px 28px",
+                background: " #007C89",
+                color: "#FFF",
+                border: "none",
+              }}
+            >
+              Sign Up
+            </button>
+          </div>
          
         </Toolbar>
       </Container>
     </AppBar>
+   
+          
   );
+
 };
 export default ResponsiveAppBar;
