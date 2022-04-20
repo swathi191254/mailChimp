@@ -98,3 +98,13 @@
     line-height: 1;
     margin-top: 10%;
 }
+.pics{
+    display: flex;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.pics > div{
+    width: 20%;
+    margin: 5%;
+}
+
