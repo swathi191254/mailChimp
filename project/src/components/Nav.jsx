@@ -129,7 +129,7 @@ const navigete = useNavigate()
             classNameName='chimp'
             sx={{ ml:2, display: { xs: 'none',md:'flex'  },  }}
           onClick = {()=>{
-            navigete('/1')
+            navigete('/SearchPage')
           }} >
          <SavedSearchIcon />
           </Typography>

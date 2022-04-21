@@ -18,7 +18,7 @@ useEffect(() => {
   getData().then((arr) => setArr(arr))
   console.log(arr)
 }, [])
-console.log(arr)
+
 
 
   
@@ -27,26 +27,27 @@ console.log(arr)
     <h1>Search Mailchimp</h1>
     <input type="text" onChange={(e)=>setSearch(e.target.value)} />
    { 
-     arr.filter((data)=>{
+     arr && arr.filter((el)=>{
        if(search === ""){
-         return data;
+         return el;
        }
        else{
-         return data.data.toLowerCase().includes(search.toLowerCase())
+         return el.data.toLowerCase().includes(search.toLowerCase())
        }
      })
-     .map((data,i)=>{
+     .map((el,i)=>{
        return (
        <div key={i}>
-         <p>{data.data}</p>
-         <p>{data.name}</p>
+         <p>{el.data}</p>
+         <p>{el.name}</p>
          
          <hr/>
          </div>
        )
      })
    }
-   
+   <Pagination count={10} />
+    
    <Footer/>
   </div>;
 };
