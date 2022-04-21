@@ -5,7 +5,6 @@ import ResponsiveAppBar from "./Nav";
 import { Footer } from "./Footer";
 const SearchPage = () => {
   const [search, setSearch] = useState("");
-  const [page, setPage] = useState(0)
   
   console.log(search)
 const [arr,setArr] = useState(null)
@@ -20,9 +19,7 @@ useEffect(() => {
   console.log(arr)
 }, [])
 console.log(arr)
-// const handleClick = (e) ={
-//   setPage(e.target.arr)
-// }
+
 
   
   return <div className="search">
@@ -49,7 +46,7 @@ console.log(arr)
        )
      })
    }
-   {/* <Pagination count={10} onClick={handleClick} /> */}
+   
    <Footer/>
   </div>;
 };
