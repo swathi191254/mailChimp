@@ -5,16 +5,12 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import './nav.css';
 import LanguageIcon from '@mui/icons-material/Language';
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
-import { useNavigate } from 'react-router';
 
 const settings =['English','Fresh','Itali','Deustch']
 
@@ -40,44 +36,55 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="fixed" className='nav'>
+    <AppBar position="fixed"  className='nav'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <div className="navbar">
-  <div className="subnav">
-    <button className="subnavbtn">About <i className="fa fa-caret-down"></i></button>
-    <div className="subnav-content">
-      <a href="#company">Company</a>
-      <a href="#team">Team</a>
-      <a href="#careers">Careers</a>
-    </div>
-  </div> 
-  <div className="subnav">
-    <button className="subnavbtn">Services <i className="fa fa-caret-down"></i></button>
-    <div className="subnav-content">
-      <a href="#bring">Bring</a>
-      <a href="#deliver">Deliver</a>
-      <a href="#package">Package</a>
-      <a href="#express">Express</a>
-    </div>
-  </div> 
-  <div className="subnav">
-    <button className="subnavbtn">Partners <i className="fa fa-caret-down"></i></button>
-    <div className="subnav-content">
-      <a href="#link1">Link 1</a>
-      <a href="#link2">Link 2</a>
-      <a href="#link3">Link 3</a>
-      <a href="#link4">Link 4</a>
-    </div>
-  </div>
-  <div className="subnavbtn">Contact</div>
-</div>
-
+        <Typography
+            variant="p"
+            noWrap
+            component="div"
+            color='black'
+            
+            sx={{ ml: 2, display: { xs: 'none',md:'flex'  },  }}
+          >
+            About
+          </Typography>
           <Typography
             variant="p"
             noWrap
             component="div"
             color='black'
+            
+            sx={{ ml: 2, display: { xs: 'none',md:'flex'  },  }}
+          >
+            Partners
+          </Typography>
+          <Typography
+            variant="p"
+            noWrap
+            component="div"
+            color='black'
+           
+            sx={{ ml: 2, display: { xs: 'none',md:'flex'  },  }}
+          >Services
+          </Typography>
+          <Typography
+            variant="p"
+            noWrap
+            component="div"
+            color='black'
+           
+            sx={{ ml: 2, display: { xs: 'none',md:'flex'  },  }}
+          >
+            Contact
+          </Typography>
+       
+          <Typography
+            variant="p"
+            noWrap
+            component="div"
+            color='black'
+            style={{width:'300px', height:'60px'}}
             classNameName='chimp'
             sx={{ ml: 24, display: { xs: 'none',md:'flex'  },  }}
           >

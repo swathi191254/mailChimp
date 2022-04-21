@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import './nav.css'
+
 const Image = styled.img`
 width:450px`
 function Body() {
   return (
-    <div>
+    <div className='body'>
      <div className='grid' >
          <div className='grid1'>
          <h1 >Do it all with Mailchimp</h1>
