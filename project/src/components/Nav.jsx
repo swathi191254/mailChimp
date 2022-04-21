@@ -9,6 +9,7 @@ import Container from '@mui/material/Container';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import './nav.css';
+import { useNavigate } from 'react-router';
 import LanguageIcon from '@mui/icons-material/Language';
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 
@@ -16,7 +17,7 @@ const settings =['English','Fresh','Itali','Deustch']
 
 
 const ResponsiveAppBar = () => {
-  
+const navigete = useNavigate()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -127,7 +128,9 @@ const ResponsiveAppBar = () => {
             color='black'
             classNameName='chimp'
             sx={{ ml:2, display: { xs: 'none',md:'flex'  },  }}
-          >
+          onClick = {()=>{
+            navigete('/1')
+          }} >
          <SavedSearchIcon />
           </Typography>
           <div

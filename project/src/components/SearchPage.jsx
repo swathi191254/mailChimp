@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
+import './nav.css'
+import { Pagination } from "@mui/material";
+import ResponsiveAppBar from "./Nav";
+import { Footer } from "./Footer";
 const SearchPage = () => {
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState(0)
+  
   console.log(search)
 const [arr,setArr] = useState(null)
+
+
 const getData = () => 
 fetch("http://localhost:3000/data")
 .then((res)=> res.json())
@@ -12,12 +20,16 @@ useEffect(() => {
   console.log(arr)
 }, [])
 console.log(arr)
+// const handleClick = (e) ={
+//   setPage(e.target.arr)
+// }
 
   
-  return  <div>
-    <h1>Seach Page</h1>
+  return <div className="search">
+    <ResponsiveAppBar />
+    <h1>Search Mailchimp</h1>
     <input type="text" onChange={(e)=>setSearch(e.target.value)} />
-   {
+   { 
      arr.filter((data)=>{
        if(search === ""){
          return data;
@@ -37,6 +49,8 @@ console.log(arr)
        )
      })
    }
+   {/* <Pagination count={10} onClick={handleClick} /> */}
+   <Footer/>
   </div>;
 };
 

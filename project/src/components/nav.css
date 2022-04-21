@@ -110,3 +110,12 @@
     width: 20%;
     margin: 5%;
 }
+.search > h1{
+    margin-left: 20%;
+    margin-top: 10%;
+}
+.search > input{
+    width: 50%;
+    height: 70px;
+    margin-left: 20%;
+}
