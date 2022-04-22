@@ -151,6 +151,9 @@ const navigete = useNavigate()
                 border: " 0.8px solid #241C15",
                 background: "transparent",
               }}
+              onClick = {()=>{
+                navigete('/LoginPage')
+              }}
             >
               Log In
             </button>
