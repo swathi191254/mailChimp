@@ -84,10 +84,12 @@ export default function Signup(){
                         user?<span>Another user with this username already exists. Maybe it’s your evil twin. Spooky</span>:<></>}
                     </div>
                     <PasswordTab password={password} setPassword={setPassword} setButton={setButton} detail={detail} setDetail={setDetail}/>
-                    <Button className="signupBtn" onClick={submitData} type="submit"><Link to="/dashboard" >Sign Up</Link></Button>
-                    <CheckBox type="checkbox" />
+                   <div className="checkbox">
+                    <CheckBox type="checkbox" className="box"  />
                     <p>I don't want to receive updates from Mailchimp related to marketing best practices, product and feature updates, and promotions.</p>
+                    </div>
                 </div>
+                <Button className="signupBtn" onClick={submitData} type="submit"><Link to="/dashboard" >Sign Up</Link></Button>
                 <p>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp's <span>Terms of Use</span> and <span>Privacy Policy</span>.</p>
                 <p>©2001–2021 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group. Cookie Preferences, Privacy, and Terms.</p>
             </div>

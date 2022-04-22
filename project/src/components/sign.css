@@ -34,6 +34,7 @@
  h3~p{
      width: 53.4rem;
      margin: 1rem 0px;
+     margin-bottom: -50px;
  }   
  p{
      font-weight: 100;
@@ -78,22 +79,33 @@
      box-sizing: border-box;
      border-radius: 2px;
      outline-color: #007C89;
-     width: 49rem;
-     height: 4.3rem;
+     width: 29rem;
+     height: 3.3rem;
      padding-left: 1.6rem;
      font-size: 1.6rem;
  }
- .formS>p{
+ .checkbox{
+  
+     display: flex;
+     width: 50%;
+     margin-left: -6%;
+ }
+ .checkbox  > p{
+     margin-top: -10px;
+ }
+ .checkbox > .box
+{
+    width: 15%;
+} .formS>p{
      color: #241C15;
-     margin: 0rem;
+     
      font-size: 1.3rem;
-     text-align: left;
-     line-height: 1.9rem;
-     /* letter-spacing:-3%; */
-     font-weight: 400;
+     
+    
+     font-weight: 100;
      width:29.6rem;
      margin-right: 4.3rem;
-     float: right;
+     
  }
  input::-ms-reveal,
  input::-ms-clear {

@@ -60,13 +60,7 @@ export default function PasswordTab({password, setPassword, setButton, detail,se
                 <br />
                 {password?<span>Please follow the below conventions for writing your password</span>:<></>}
             </div>
-            <ul className="ulList">
-                <li className="low">One lowercase character</li>
-                <li className="upper">One uppercase character</li>
-                <li className="num">One number</li>
-                <li className="spe">One special character</li>
-                <li className="len">8 characters minimum</li>
-            </ul>
+            
         </>
     )
 }

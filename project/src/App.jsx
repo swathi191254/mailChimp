@@ -6,13 +6,13 @@ import {Route,Routes} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/SearchPage" element={<SearchPage />} />
-      </Routes> */}
-      
-      <Signup />
-     
+        <Route path='/SignupPage' element={<Signup />}/>
+    
+      </Routes>
+   
     </div>
   );
 }

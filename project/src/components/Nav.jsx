@@ -164,6 +164,9 @@ const navigete = useNavigate()
                 color: "#FFF",
                 border: "none",
               }}
+              onClick = {()=>{
+                navigete('/SignupPage')
+              }}
             >
               Sign Up
             </button>
