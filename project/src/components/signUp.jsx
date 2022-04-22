@@ -56,7 +56,7 @@ export default function Signup(){
     const submitData = (e)=>{
         e.preventDefault();
         try{
-            axios.post("http://localhost:3001/create", detail);
+            axios.post("http://localhost:3000/sign", detail);
         } catch(err){
             console.log(err);
         }
