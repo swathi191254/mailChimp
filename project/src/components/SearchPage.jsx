@@ -46,7 +46,7 @@ useEffect(() => {
        )
      })
    }
-   <Pagination count={10} />
+  
     
    <Footer/>
   </div>;
