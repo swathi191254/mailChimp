@@ -5,6 +5,18 @@
       "username": "Swathi ",
       "password": "anfli;ajfla;ifiopa",
       "id": 1
+    },
+    {
+      "email": "",
+      "username": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "email": "",
+      "username": "",
+      "password": "",
+      "id": 3
     }
   ],
   "create": [

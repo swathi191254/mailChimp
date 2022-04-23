@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import './nav.css'
 import { Link } from 'react-router'
+import { useNavigate } from "react-router";
+
 const Image = styled.img`
 width:450px`
 function Body() {
+    const navigete = useNavigate();
   return (
     <div className='body'>
      <div className='grid' >
@@ -19,6 +22,9 @@ function Body() {
                 background: " #007C89",
                 color: "#FFF",
                 border: "none",
+              }}
+              onClick={() => {
+                navigete("/SignupPage");
               }}
             >
               Sign Up
@@ -71,6 +77,9 @@ function Body() {
                 color: "#FFF",
                 border: "none",
                 marginLeft:'15%'
+              }}
+              onClick={() => {
+                navigete("/SignupPage");
               }}
             >
               Sign Up
@@ -168,6 +177,9 @@ function Body() {
                 color: "#FFF",
                 border: "none",
                 marginLeft:'45%'
+              }}
+              onClick={() => {
+                navigete("/SignupPage");
               }}
             >
               Sign Up
