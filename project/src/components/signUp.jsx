@@ -21,13 +21,13 @@ export default function Signup(){
         username:"",
         password:""
     });
-    let [formData,setFormData] = useState({});
-    const { isloading, islogin, iserror } = useSelector((state)=>({
-        isloading: state.signup.isloading,
-        signup: state.signup.signup,
-        iserror: state.signup.iserror
-    }));
-    const dispatch = useDispatch();
+    // let [formData,setFormData] = useState({});
+    // const { isloading, islogin, iserror } = useSelector((state)=>({
+    //     isloading: state.signup.isloading,
+    //     signup: state.signup.signup,
+    //     iserror: state.signup.iserror
+    // }));
+    // const dispatch = useDispatch();
     const Button = styled.button`
         height:4.5rem;
         width: 13.7rem;
@@ -64,48 +64,48 @@ export default function Signup(){
     }
 
    
-    const handlechange = (e)=>{
-        const {name,value} = e.target;
+    // const handlechange = (e)=>{
+    //     const {name,value} = e.target;
 
-        formData[name] = value;
-        setFormData({...formData});
-        console.log(formData)
+    //     formData[name] = value;
+    //     setFormData({...formData});
+    //     console.log(formData)
 
-    }
+    // }
     
 
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        console.log("aaaaaa")
-        dispatch(isLoading());
-        console.log(isloading);
-        fetch("https://mailchimpabc.herokuapp.com/create",{
+    // const handleSubmit = (e)=>{
+    //     e.preventDefault();
+    //     console.log("aaaaaa")
+    //     dispatch(isLoading());
+    //     console.log(isloading);
+    //     fetch("https://mailchimpabc.herokuapp.com/create",{
             
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: {
-                "Content-Type": "application/json",
+    //         method: "POST",
+    //         body: JSON.stringify(formData),
+    //         headers: {
+    //             "Content-Type": "application/json",
                 
                 
-            }
-        })
-        .then(res => res.json())
-        .then(data =>{
+    //         }
+    //     })
+    //     .then(res => res.json())
+    //     .then(data =>{
             
-            if(data.status==="failed"){
-                dispatch(isError(true));
-                console.log("d",data);
-            }else{
-                 dispatch(isSignup(true));
+    //         if(data.status==="failed"){
+    //             dispatch(isError(true));
+    //             console.log("d",data);
+    //         }else{
+    //              dispatch(isSignup(true));
                 
                 
-            }
-        })
-        .catch(()=>{
-            dispatch(isError(true));
-        })
+    //         }
+    //     })
+    //     .catch(()=>{
+    //         dispatch(isError(true));
+    //     })
 
-    }
+    // }
 
     return (
         <div className='signup'>
