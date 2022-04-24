@@ -11,7 +11,7 @@ const [arr,setArr] = useState(null)
 
 
 const getData = () => 
-fetch("http://localhost:3000/data")
+fetch("https://mailchimpabc.herokuapp.com/data")
 .then((res)=> res.json())
 
 useEffect(() => {
