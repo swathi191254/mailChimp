@@ -4,6 +4,10 @@ import {useState} from "react";
 import styled from "styled-components";
 import PasswordTab from "./PasswordTab";
 import {Link} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {isLoading,isSignup,isError} from "../redux/signup/actions";
+import {  Navigate } from "react-router-dom";
+
 
 export default function Signup(){
     var pattern = /^[^ ]+@[^]+\.[a-z]{2,3}$/;
@@ -17,7 +21,13 @@ export default function Signup(){
         username:"",
         password:""
     });
-    
+    // let [formData,setFormData] = useState({});
+    // const { isloading, islogin, iserror } = useSelector((state)=>({
+    //     isloading: state.signup.isloading,
+    //     signup: state.signup.signup,
+    //     iserror: state.signup.iserror
+    // }));
+    // const dispatch = useDispatch();
     const Button = styled.button`
         height:4.5rem;
         width: 13.7rem;
@@ -53,15 +63,49 @@ export default function Signup(){
         setDetail({...detail, [e.target.name]:e.target.value})
     }
 
-    const submitData = (e)=>{
-        e.preventDefault();
-        try{
-            axios.post("http://localhost:3000/sign", detail);
-        } catch(err){
-            console.log(err);
-        }
-        localStorage.setItem("user",JSON.stringify(detail))
-    }
+   
+    // const handlechange = (e)=>{
+    //     const {name,value} = e.target;
+
+    //     formData[name] = value;
+    //     setFormData({...formData});
+    //     console.log(formData)
+
+    // }
+    
+
+    // const handleSubmit = (e)=>{
+    //     e.preventDefault();
+    //     console.log("aaaaaa")
+    //     dispatch(isLoading());
+    //     console.log(isloading);
+    //     fetch("https://instagram-backend-dipu1-app.herokuapp.com/signup",{
+            
+    //         method: "POST",
+    //         body: JSON.stringify(formData),
+    //         headers: {
+    //             "Content-Type": "application/json",
+                
+                
+    //         }
+    //     })
+    //     .then(res => res.json())
+    //     .then(data =>{
+            
+    //         if(data.status==="failed"){
+    //             dispatch(isError(true));
+    //             console.log("d",data);
+    //         }else{
+    //              dispatch(isSignup(true));
+                
+                
+    //         }
+    //     })
+    //     .catch(()=>{
+    //         dispatch(isError(true));
+    //     })
+
+    // }
 
     return (
         <div className='signup'>
@@ -89,7 +133,7 @@ export default function Signup(){
                     <p>I don't want to receive updates from Mailchimp related to marketing best practices, product and feature updates, and promotions.</p>
                     </div>
                 </div>
-                <Button className="signupBtn" onClick={submitData} type="submit"><Link to="/"  >Sign Up</Link></Button>
+                <Button className="signupBtn" type="submit"><Link to="/"  >Sign Up</Link></Button>
                 <p>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp's <span>Terms of Use</span> and <span>Privacy Policy</span>.</p>
                 <p>©2001–2021 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group. Cookie Preferences, Privacy, and Terms.</p>
             </div>

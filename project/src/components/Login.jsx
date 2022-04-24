@@ -4,6 +4,10 @@ import {useState} from "react";
 import styled from "styled-components";
 import PasswordTab from "./PasswordTab";
 import {Link} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {isLoading,isLogin,isError} from "../redux/login/actions";
+import {  Navigate } from "react-router-dom";
+
 
 export default function Login(){
     var pattern = /^[^ ]+@[^]+\.[a-z]{2,3}$/;
@@ -17,6 +21,56 @@ export default function Login(){
         username:"",
         password:""
     });
+    
+    // let [formData,setFormData] = useState({});
+    // const { isloading, signup, iserror } = useSelector((state)=>({
+    //     isloading: state.signup.isloading,
+    //     signup: state.signup.signup,
+    //     iserror: state.signup.iserror
+    // }));
+    // const dispatch = useDispatch();
+    // const handlechange = (e)=>{
+    //     const {name,value} = e.target;
+
+    //     formData[name] = value;
+    //     setFormData({...formData});
+    //     console.log(formData)
+
+    // }
+    
+
+    // const handleSubmit = (e)=>{
+    //     e.preventDefault();
+    //     console.log("aaaaaa")
+    //     dispatch(isLoading());
+    //     console.log(isloading);
+    //     fetch("https://instagram-backend-dipu1-app.herokuapp.com/signup",{
+            
+    //         method: "POST",
+    //         body: JSON.stringify(formData),
+    //         headers: {
+    //             "Content-Type": "application/json",
+                
+                
+    //         }
+    //     })
+    //     .then(res => res.json())
+    //     .then(data =>{
+            
+    //         if(data.status==="failed"){
+    //             dispatch(isError(true));
+    //             console.log("d",data);
+    //         }else{
+    //              dispatch(isLogin(true));
+                
+                
+    //         }
+    //     })
+    //     .catch(()=>{
+    //         dispatch(isError(true));
+    //     })
+
+    // }
     
     const Button = styled.button`
         height:4.5rem;
