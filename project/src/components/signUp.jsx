@@ -10,6 +10,7 @@ import {  Navigate } from "react-router-dom";
 
 
 export default function Signup(){
+    
     var pattern = /^[^ ]+@[^]+\.[a-z]{2,3}$/;
     const [email, setEmail] = useState(false);
     const [username, setUsername] = useState(false);
@@ -21,13 +22,6 @@ export default function Signup(){
         username:"",
         password:""
     });
-    // let [formData,setFormData] = useState({});
-    // const { isloading, islogin, iserror } = useSelector((state)=>({
-    //     isloading: state.signup.isloading,
-    //     signup: state.signup.signup,
-    //     iserror: state.signup.iserror
-    // }));
-    // const dispatch = useDispatch();
     const Button = styled.button`
         height:4.5rem;
         width: 13.7rem;
@@ -64,55 +58,12 @@ export default function Signup(){
     }
 
    
-    // const handlechange = (e)=>{
-    //     const {name,value} = e.target;
-
-    //     formData[name] = value;
-    //     setFormData({...formData});
-    //     console.log(formData)
-
-    // }
-    
-
-    // const handleSubmit = (e)=>{
-    //     e.preventDefault();
-    //     console.log("aaaaaa")
-    //     dispatch(isLoading());
-    //     console.log(isloading);
-    //     fetch("https://mailchimpabc.herokuapp.com/create",{
-            
-    //         method: "POST",
-    //         body: JSON.stringify(formData),
-    //         headers: {
-    //             "Content-Type": "application/json",
-                
-                
-    //         }
-    //     })
-    //     .then(res => res.json())
-    //     .then(data =>{
-            
-    //         if(data.status==="failed"){
-    //             dispatch(isError(true));
-    //             console.log("d",data);
-    //         }else{
-    //              dispatch(isSignup(true));
-                
-                
-    //         }
-    //     })
-    //     .catch(()=>{
-    //         dispatch(isError(true));
-    //     })
-
-    // }
 
     return (
         <div className='signup'>
             <img src="https://login.mailchimp.com/release/1.1.1b60850200fc127a64982b77f29f3065f9867d8f2/images/brand_assets/logos/mc-freddie-dark.svg" alt="" />
             <div className="signupComponent">
                 <h3 className="h3">Welcome to Mailchimp</h3>
-                <p> Create an account? <span>Log in</span></p>
                 <div className="formS">
                     <div>
                         <p>Email</p>

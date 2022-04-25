@@ -1,15 +1,13 @@
-import axios from "axios";
-import "./sign.css";
-import {useState} from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {isLoading,isSignup,isError} from "../redux/signup/actions";
+import {  Navigate } from "react-router-dom";
 import styled from "styled-components";
 import PasswordTab from "./PasswordTab";
 import {Link} from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import {isLoading,isLogin,isError} from "../redux/login/actions";
-import {  Navigate } from "react-router-dom";
 
 
-export default function Login(){
+function SignUpForm(){
     var pattern = /^[^ ]+@[^]+\.[a-z]{2,3}$/;
     const [email, setEmail] = useState(false);
     const [username, setUsername] = useState(false);
@@ -21,12 +19,11 @@ export default function Login(){
         username:"",
         password:""
     });
-    
     let [formData,setFormData] = useState({});
-    const { isloading, login, iserror } = useSelector((state)=>({
-        isloading: state.login.isloading,
-        login: state.login.login,
-        iserror: state.login.iserror
+    const { isloading, signup, iserror } = useSelector((state)=>({
+        isloading: state.signup.isloading,
+        signup: state.signup.signup,
+        iserror: state.signup.iserror
     }));
     const dispatch = useDispatch();
     const handlechange = (e)=>{
@@ -61,7 +58,7 @@ export default function Login(){
                 dispatch(isError(true));
                 console.log("d",data);
             }else{
-                 dispatch(isLogin(true));
+                 dispatch(isSignup(true));
                 
                 
             }
@@ -70,6 +67,9 @@ export default function Login(){
             dispatch(isError(true));
         })
 
+    }
+    if(signup){
+        return < Navigate to={"/"} />;
     }
     
     const Button = styled.button`
@@ -107,17 +107,30 @@ export default function Login(){
         setDetail({...detail, [e.target.name]:e.target.value})
     }
 
-    const submitData = (e)=>{
-        e.preventDefault();
-        try{
-            axios.post("https://mailchimpabc.herokuapp.com/create", detail);
-        } catch(err){
-            console.log(err);
-        }
-        localStorage.setItem("user",JSON.stringify(detail))
-    }
-
     return (
+        // <div className="signup-box">
+        //     <div className="or">
+        //         <div>
+        //             <hr />
+        //         </div>
+        //         <div>
+        //             <p>OR</p>
+        //         </div>
+        //         <div>
+        //             <hr />
+        //         </div>
+        //     </div>
+        //     <form onSubmit={handleSubmit}>
+        //         <input type="text" name="email" placeholder="Email"onChange={handlechange} />
+        //         <input type="password" name="password" placeholder="Password" onChange={handlechange}/>
+                  
+        //         <input type="submit" value={isloading?"loading...":"Sign Up"}  ></input>
+        //     </form>
+        //     {iserror?<p>email or phone already exist</p>:null}
+            
+        //     <p>By signing up, you agree to our Terms , Data Policy and Cookies Policy .</p>
+        // </div>
+        
         <div className='signup'>
             <img src="https://login.mailchimp.com/release/1.1.1b60850200fc127a64982b77f29f3065f9867d8f2/images/brand_assets/logos/mc-freddie-dark.svg" alt="" />
             <div className="signupComponent">
@@ -129,11 +142,26 @@ export default function Login(){
                         <br />
                         {email?<span>Please enter a valid email</span>:<></>}
                     </div>
+                    <div>
+                        <p>Username</p>
+                        <input type="text" name="username" value={detail.username} onChange={handleUser} onClick={()=>setUsername(true)} onBlur={()=>setUsername(false)}/>
+                        <br />
+                        {username ? <h5 className="h5">Choose a username that contains only letters and numbers, or use your email address. This is for login only.</h5>:
+                        user?<span>Another user with this username already exists. Maybe it’s your evil twin. Spooky</span>:<></>}
+                    </div>
                     <PasswordTab password={password} setPassword={setPassword} setButton={setButton} detail={detail} setDetail={setDetail}/>
+                   <div className="checkbox">
+                    <CheckBox type="checkbox" className="box"  />
+                    <p>I don't want to receive updates from Mailchimp related to marketing best practices, product and feature updates, and promotions.</p>
+                    </div>
                 </div>
-                <Button className="LoginBtn" onClick={submitData} type="submit"><Link to="/"  >Login</Link></Button>
+                <Button className="signupBtn" type="submit"><Link to="/"  >Sign Up</Link></Button>
+                <p>By clicking the "Sign Up" button, you are creating a Mailchimp account, and you agree to Mailchimp's <span>Terms of Use</span> and <span>Privacy Policy</span>.</p>
+                <p>©2001–2021 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group. Cookie Preferences, Privacy, and Terms.</p>
             </div>
             
         </div>
     )
 }
+
+export default SignUpForm;
