@@ -131,7 +131,7 @@ export default function Login(){
                     </div>
                     <PasswordTab password={password} setPassword={setPassword} setButton={setButton} detail={detail} setDetail={setDetail}/>
                 </div>
-                <Button className="LoginBtn" onClick={submitData} type="submit"><Link to="/"  >Login</Link></Button>
+                <Button className="LoginBtn" value={isloading?"loading...":"Log Up"} onClick={submitData} type="submit"><Link to="/"  >Login</Link></Button>
             </div>
             
         </div>
