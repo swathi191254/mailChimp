@@ -4,9 +4,9 @@ const slider = () => {
   return (
     <div>
       <div class="navbar">
-  <a href="#home">Home</a>
+  <a href="#home">Products</a>
   <div class="subnav">
-    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+    <button class="subnavbtn">Resources<i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
       <a href="#company">Company</a>
       <a href="#team">Team</a>
@@ -14,7 +14,7 @@ const slider = () => {
     </div>
   </div>
   <div class="subnav">
-    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+    <button class="subnavbtn">Inspiration<i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
       <a href="#bring">Bring</a>
       <a href="#deliver">Deliver</a>
@@ -23,7 +23,7 @@ const slider = () => {
     </div>
   </div>
   <div class="subnav">
-    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+    <button class="subnavbtn">Pricing<i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
       <a href="#link1">Link 1</a>
       <a href="#link2">Link 2</a>
