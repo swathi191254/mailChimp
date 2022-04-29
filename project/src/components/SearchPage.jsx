@@ -70,7 +70,7 @@ useEffect(() => {
           <p className="gap"></p>
         <p className="teal">Number:{i}</p>
          <p>{el.data}</p>
-         <p>{el.name}</p>
+         <p>{el.name}Find all the Mailchimp API documentation and tools developers need to send marketing and transactional emails.</p>
         
          
          </div>
