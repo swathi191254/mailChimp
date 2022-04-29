@@ -7,6 +7,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import Box from '@mui/material/Box';
 import { storeData } from '../redux/storeData/action';
+import { teal } from "@mui/material/colors";
 
 const SearchPage = () => {
   const [search, setSearch] = useState("");
@@ -47,10 +48,13 @@ useEffect(() => {
 
 
   
-  return <div className="search">
+  return <div >
     <ResponsiveAppBar />
+    <div className="search">
     <h1>Search Mailchimp</h1>
     <input type="text" onChange={(e)=>setSearch(e.target.value)} />
+    </div>
+    <div className="search-data">
    { 
      arr && arr.filter((el)=>{
        if(search === ""){
@@ -63,15 +67,18 @@ useEffect(() => {
      .map((el,i)=>{
        return (
        <div key={i}>
+          <p className="gap"></p>
+        <p className="teal">Number:{i}</p>
          <p>{el.data}</p>
          <p>{el.name}</p>
+        
          
-         <hr/>
          </div>
          
        )
      })
    }
+   </div>
    <Box py={4} display="flex" justifyContent="center">
         <Pagination
           count={10}

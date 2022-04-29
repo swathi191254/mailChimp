@@ -113,9 +113,24 @@
 .search > h1{
     margin-left: 20%;
     margin-top: 10%;
+    color: white;
 }
 .search > input{
     width: 50%;
     height: 70px;
     margin-left: 20%;
+}
+.search-data{
+    margin-left: 20%;
+}
+.gap{
+    margin: 5%;
+}
+.teal{
+    color: teal;
+}
+.search {
+    background-color: #241c15;
+   padding-top: 5%;
+   padding-bottom: 5%;
 }
