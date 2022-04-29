@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import './nav.css'
-import { Link } from 'react-router'
 import { useNavigate } from "react-router";
 
 const Image = styled.img`

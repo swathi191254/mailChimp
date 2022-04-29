@@ -1,12 +1,12 @@
 
-.chimp > img{
-    width: 100px;
-}
+
 *{
     font-family: Graphik Web,Helvetica Neue,Helvetica,Arial,Verdana,sans-serif;
     
 }
-
+.chimp > img{
+    width: 100px;
+}
 .grid{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -134,12 +134,11 @@
    padding-top: 5%;
    padding-bottom: 5%;
 }
-@media screen {
-    
-}
 
-@media only screen and (min-width: 600px) {
-    .image{
+
+
+  @media screen and (max-width: 800px) {
+    .image-mail{
         width: 100px;
     }
   }
